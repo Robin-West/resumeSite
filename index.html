@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robin West | Senior Engineering Manager & AI Platform Strategist</title>
+  
+  <!-- Fonts: Cormorant Garamond (Editorial Elegance) & Plus Jakarta Sans (Clean Modern Readability) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          },
+          colors: {
+            parchment: '#FAF7F4',
+            warmwhite: '#FFFDFB',
+            canvas: '#F5EFEB',
+            roseblush: '#F4DDDA',
+            rosetone: '#C97A7E',
+            deeprose: '#964B53',
+            sagebg: '#EAF0E8',
+            sagetone: '#749171',
+            deepsage: '#435E40',
+            warmgray: '#6E6765',
+            ink: '#2B2627',
+            inksoft: '#453E40',
+          },
+          boxShadow: {
+            'soft-card': '0 10px 30px -5px rgba(201, 122, 126, 0.08), 0 4px 12px rgba(43, 38, 39, 0.04)',
+            'soft-hover': '0 20px 35px -8px rgba(201, 122, 126, 0.16), 0 8px 16px rgba(43, 38, 39, 0.05)',
+            'rose-glow': '0 0 40px -10px rgba(201, 122, 126, 0.3)',
+            'sage-glow': '0 0 35px -10px rgba(116, 145, 113, 0.25)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FAF7F4;
+      color: #2B2627;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .hero-glow-rose {
+      background: radial-gradient(circle at 60% 30%, rgba(244, 221, 218, 0.6) 0%, rgba(250, 247, 244, 0) 70%);
+    }
+    .hero-glow-sage {
+      background: radial-gradient(circle at 20% 70%, rgba(234, 240, 232, 0.7) 0%, rgba(250, 247, 244, 0) 65%);
+    }
+    .editorial-quote::before {
+      content: "“";
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem;
+      position: absolute;
+      left: -1rem;
+      top: -1.5rem;
+      color: #C97A7E;
+      opacity: 0.3;
+    }
+    @media print {
+      .no-print { display: none !important; }
+      body { background: white !important; color: black !important; }
+    }
+  </style>
+</head>
+<body class="selection:bg-roseblush selection:text-deeprose min-h-screen relative overflow-x-hidden">
+
+  <!-- Ambient Decorative Background Lighting -->
+  <div class="fixed inset-0 pointer-events-none hero-glow-rose z-0"></div>
+  <div class="fixed inset-0 pointer-events-none hero-glow-sage z-0"></div>
+
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-warmwhite/80 border-b border-roseblush/60 no-print transition-all">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#hero" class="group flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-roseblush via-warmwhite to-sagebg border border-rosetone/30 flex items-center justify-center text-deeprose font-serif text-xl font-bold group-hover:scale-105 transition-transform">
+          RW
+        </div>
+        <div>
+          <span class="block font-serif text-xl font-semibold tracking-wide text-ink group-hover:text-deeprose transition-colors">Robin West</span>
+          <span class="block text-xs uppercase tracking-wider text-warmgray font-medium">Engineering Leader & AI Strategist</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-inksoft">
+        <a href="#about" class="hover:text-deeprose transition-colors">Philosophy</a>
+        <a href="#experience" class="hover:text-deeprose transition-colors">Experience</a>
+        <a href="#skills-certifications" class="hover:text-deeprose transition-colors">Skills & Certs</a>
+        <a href="#life" class="hover:text-deepsage transition-colors">Beyond the Code</a>
+        <a href="#contact" class="px-5 py-2 rounded-full bg-gradient-to-r from-rosetone to-deeprose text-white text-xs tracking-wider uppercase font-semibold shadow-soft-card hover:shadow-soft-hover hover:opacity-95 transition-all">
+          Get in Touch
+        </a>
+      </nav>
+
+      <!-- Mobile Nav Quick Anchor -->
+      <a href="#contact" class="md:hidden text-xs uppercase tracking-wider font-semibold text-deeprose border border-rosetone/30 px-3 py-1.5 rounded-full">
+        Contact
+      </a>
+    </div>
+  </header>
+
+  <main class="relative z-10">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="pt-12 pb-20 md:pt-20 md:pb-28">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Text Column (Col 7) -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-roseblush/60 border border-rosetone/30 text-deeprose text-xs font-semibold tracking-wider uppercase">
+              <span class="w-2 h-2 rounded-full bg-rosetone animate-pulse"></span>
+              Engineering Leader • Systems Architect • SWE Member
+            </div>
+            
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-ink leading-[1.15]">
+              Scaling Systems. <br class="hidden sm:inline" />
+              <span class="italic font-normal text-deeprose">Empowering People.</span> <br />
+              Bridging Platform & AI.
+            </h1>
+            
+            <p class="text-base sm:text-lg text-inksoft max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
+              Transformational <strong>Senior Engineering Manager</strong> and <strong>Platform Architect</strong> with 14+ years building high-throughput microservices, API governance platforms, and AI-native developer tooling. Champion of developer empathy, operational resilience, and inclusive technical culture.
+            </p>
+
+            <!-- Quick Impact Metrics Pill Container -->
+            <div class="grid grid-cols-3 gap-4 pt-3 pb-2 max-w-lg mx-auto lg:mx-0">
+              <div class="p-4 rounded-2xl bg-warmwhite/80 border border-roseblush shadow-soft-card text-center">
+                <div class="font-serif text-2xl sm:text-3xl font-bold text-deeprose">+30%</div>
+                <div class="text-[11px] uppercase tracking-wider text-warmgray mt-1">Team Velocity via AI</div>
+              </div>
+              <div class="p-4 rounded-2xl bg-warmwhite/80 border border-roseblush shadow-soft-card text-center">
+                <div class="font-serif text-2xl sm:text-3xl font-bold text-deepsage">~30%</div>
+                <div class="text-[11px] uppercase tracking-wider text-warmgray mt-1">Annual API Growth</div>
+              </div>
+              <div class="p-4 rounded-2xl bg-warmwhite/80 border border-roseblush shadow-soft-card text-center">
+                <div class="font-serif text-2xl sm:text-3xl font-bold text-ink">12+ Yrs</div>
+                <div class="text-[11px] uppercase tracking-wider text-warmgray mt-1">DevRel & Advocacy</div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+              <a href="#experience" class="px-7 py-3 rounded-full bg-gradient-to-r from-deeprose to-rosetone text-white text-sm font-semibold tracking-wide shadow-soft-card hover:shadow-soft-hover hover:scale-[1.02] transition-all flex items-center gap-2">
+                <span>Explore Experience</span>
+                <i data-lucide="arrow-down" class="w-4 h-4"></i>
+              </a>
+              <button onclick="window.print()" class="px-6 py-3 rounded-full bg-warmwhite border border-rosetone/30 text-ink text-sm font-semibold tracking-wide hover:bg-roseblush/30 transition-all flex items-center gap-2">
+                <i data-lucide="printer" class="w-4 h-4 text-rosetone"></i>
+                <span>Print / Save PDF</span>
+              </button>
+              <a href="https://linkedin.com/in/robinmwest" target="_blank" rel="noopener" class="p-3 rounded-full bg-warmwhite border border-roseblush text-inksoft hover:text-deeprose hover:border-rosetone transition-all">
+                <i data-lucide="linkedin" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Portrait Column (Col 5) -->
+          <div class="lg:col-span-5 flex justify-center lg:justify-end">
+            <div class="relative group">
+              <!-- Glow Aura Rings -->
+              <div class="absolute -inset-4 bg-gradient-to-tr from-roseblush via-sagebg to-warmwhite rounded-[2.5rem] filter blur-xl opacity-80 group-hover:opacity-100 transition duration-700"></div>
+              
+              <!-- Portrait Frame -->
+              <div class="relative w-72 sm:w-80 md:w-88 rounded-[2.2rem] p-3 bg-gradient-to-b from-warmwhite via-roseblush/40 to-warmwhite shadow-soft-hover border border-white">
+                <img 
+                  src="classic-corporate-pxl-20260918-214612542-2.png" 
+                  alt="Robin West - Senior Engineering Manager" 
+                  class="w-full h-auto object-cover rounded-[1.8rem] shadow-sm grayscale-[10%] group-hover:grayscale-0 transition-all duration-500"
+                  onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80';"
+                />
+                
+                <!-- Floating Soft Badge: SWE Member -->
+                <div class="absolute -bottom-4 -left-4 bg-warmwhite/95 backdrop-blur-md border border-rosetone/30 px-4 py-2 rounded-2xl shadow-soft-card flex items-center gap-2.5">
+                  <div class="w-7 h-7 rounded-full bg-sagebg flex items-center justify-center text-deepsage">
+                    <i data-lucide="award" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <div class="text-xs font-bold text-ink">SWE Member</div>
+                    <div class="text-[10px] text-warmgray">Women in Engineering</div>
+                  </div>
+                </div>
+
+                <!-- Floating Soft Badge: Location -->
+                <div class="absolute -top-3 -right-3 bg-warmwhite/95 backdrop-blur-md border border-roseblush px-3.5 py-1.5 rounded-full shadow-soft-card flex items-center gap-1.5 text-xs text-inksoft">
+                  <i data-lucide="map-pin" class="w-3.5 h-3.5 text-rosetone"></i>
+                  <span>Blue Ridge, VA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: LEADERSHIP PHILOSOPHY -->
+    <section id="about" class="py-16 bg-warmwhite/60 border-y border-roseblush/40">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="relative p-8 sm:p-12 rounded-3xl bg-canvas/60 border border-white shadow-soft-card">
+          <div class="max-w-3xl mx-auto space-y-4">
+            <div class="flex items-center gap-2 text-deeprose font-serif text-lg italic">
+              <i data-lucide="sparkles" class="w-4 h-4"></i>
+              <span>Engineering Leadership Manifesto</span>
+            </div>
+            <p class="font-serif text-2xl sm:text-3xl text-ink leading-snug font-normal">
+              "Great engineering leadership isn't about micromanaging processes; it is about building intuitive, paved roads so engineers can build securely and joyfully at the frontier of innovation."
+            </p>
+            <p class="text-sm sm:text-base text-inksoft leading-relaxed pt-2">
+              Whether chairing enterprise Change Advisory Boards (CAB), standardizing multi-language SDKs, or integrating generative AI workflows to unlock a 30% surge in delivery velocity, my approach harmonizes deep technical rigor with human-centered empathy and transparent collaboration.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: COMPREHENSIVE EXPERIENCES (PILLARS VS TIMELINE) -->
+    <section id="experience" class="py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink">Leadership & Technical Architecture</h2>
+          <p class="text-sm text-warmgray mt-2">Explore my background either categorized by functional domain or as a chronological career journey.</p>
+          
+          <!-- View Toggle Pills -->
+          <div class="inline-flex p-1.5 rounded-full bg-canvas border border-roseblush mt-6 shadow-inner">
+            <button id="btn-pillars" onclick="switchView('pillars')" class="px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all bg-white text-deeprose shadow-sm">
+              Domain Pillars (Expertise)
+            </button>
+            <button id="btn-timeline" onclick="switchView('timeline')" class="px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider text-warmgray hover:text-ink transition-all">
+              Career Timeline (14+ Years)
+            </button>
+          </div>
+        </div>
+
+        <!-- VIEW A: DOMAIN PILLARS (DEFAULT) -->
+        <div id="view-pillars" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-300">
+          
+          <!-- Card 1: AI & Engineering Velocity -->
+          <div class="p-7 rounded-3xl bg-warmwhite border border-roseblush/70 shadow-soft-card hover:shadow-soft-hover hover:-translate-y-1 transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-roseblush/60 text-deeprose flex items-center justify-center">
+                <i data-lucide="cpu" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-ink">AI Enablement & Velocity</h3>
+              <p class="text-xs text-deeprose font-semibold tracking-wider uppercase">Pioneering Modern AI-Native Workflows</p>
+              <p class="text-sm text-inksoft leading-relaxed">
+                Pioneered the safe and responsible adoption of AI coding assistants (Cursor, agentic tools) and automated test generation paired with DORA metrics—achieving a <strong>30% increase in team delivery performance</strong> while establishing strict quality bars for non-deterministic code.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-6 border-t border-roseblush/40 mt-6">
+              <span class="px-2.5 py-1 rounded-lg bg-canvas text-[11px] font-medium text-inksoft">Agentic Workflows</span>
+              <span class="px-2.5 py-1 rounded-lg bg-canvas text-[11px] font-medium text-inksoft">Prompt Structuring</span>
+              <span class="px-2.5 py-1 rounded-lg bg-canvas text-[11px] font-medium text-inksoft">DORA Metrics</span>
+              <span class="px-2.5 py-1 rounded-lg bg-canvas text-[11px] font-medium text-inksoft">Validation Guardrails</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Enterprise API Governance & CAB -->
+          <div class="p-7 rounded-3xl bg-warmwhite border border-roseblush/70 shadow-soft-card hover:shadow-soft-hover hover:-translate-y-1 transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-sagebg text-deepsage flex items-center justify-center">
+                <i data-lucide="shield-check" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-ink">API & Deployment Governance</h3>
+              <p class="text-xs text-deepsage font-semibold tracking-wider uppercase">CAB Chair & Policy-as-Code</p>
+              <p class="text-sm text-inksoft leading-relaxed">
+                Chaired Change Advisory Boards (CAB), held production go/no-go authority, and authored risk-tiered change models (standard, expedited, emergency). Transformed informal manual reviews into automated CI/CD pipeline readiness gates.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-6 border-t border-roseblush/40 mt-6">
+              <span class="px-2.5 py-1 rounded-lg bg-canvas text-[11px] font-medium text-inksoft">CAB Leadership</span>
+              <span class="px-2.5 py-1 rounded-lg bg-canvas text-[11px] font-medium text-inksoft">Risk-Based Change</span>
+              <span class="px-2.5 py-1 rounded-lg bg-canvas text-[11px] font-medium text-inksoft">OAuth2 & JWT</span>
+              <span class="px-2.5 py-1 rounded-lg bg-canvas text-[11px] font-medium text-inksoft">GDPR & Security</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Developer Relations & Advocacy -->
+          <div class="p-7 rounded-3xl bg-warmwhite border border-roseblush/70 shadow-soft-card hover:shadow-soft-hover hover:-translate-y-1 transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-roseblush/60 text-deeprose flex items-center justify-center">
+                <i data-lucide="megaphone" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-ink">DevRel & Developer Experience</h3>
+              <p class="text-xs text-deeprose font-semibold tracking-wider uppercase">12 Years of Technical Advocacy</p>
+              <p class="text-sm text-inksoft leading-relaxed">
+                Authored client SDKs (.NET, JavaScript, Xamarin), ran interactive developer portals, and published technical blogs, video walkthroughs, and Postman collections. Hosted technical webinars, keynoted conferences, and organized hackathons.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-6 border-t border-roseblush/40 mt-6">
+              <span class="px-2.5 py-1 rounded-lg bg-canvas text-[11px] font-medium text-inksoft">Public Speaking</span>
+              <span class="px-2.5 py-1 rounded-lg bg-canvas text-[11px] font-medium text-inksoft">SDK Development</span>
+              <span class="px-2.5 py-1 rounded-lg bg-canvas text-[11px] font-medium text-inksoft">Technical Workshops</span>
+              <span class="px-2.5 py-1 rounded-lg bg-canvas text-[11px] font-medium text-inksoft">Self-Serve DevEx</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Cloud, PaaS & IaC Architecture -->
+          <div class="p-7 rounded-3xl bg-warmwhite border border-roseblush/70 shadow-soft-card hover:shadow-soft-hover hover:-translate-y-1 transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-sagebg text-deepsage flex items-center justify-center">
+                <i data-lucide="cloud" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-ink">Cloud Platforms & Microservices</h3>
+              <p class="text-xs text-deepsage font-semibold tracking-wider uppercase">Scalable Infrastructure & IaC Concepts</p>
+              <p class="text-sm text-inksoft leading-relaxed">
+                Guided architectural transitions from legacy monoliths to distributed microservices. Spearheaded API Gateway deployments (Apigee, Kong, KrakenD) on GCP Cloud Run and shaped architectural blueprints across Helm, Kubernetes, and Kafka.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-6 border-t border-roseblush/40 mt-6">
+              <span class="px-2.5 py-1 rounded-lg bg-canvas text-[11px] font-medium text-inksoft">GCP Cloud Run</span>
+              <span class="px-2.5 py-1 rounded-lg bg-canvas text-[11px] font-medium text-inksoft">Kubernetes & Helm</span>
+              <span class="px-2.5 py-1 rounded-lg bg-canvas text-[11px] font-medium text-inksoft">Kafka Messaging</span>
+              <span class="px-2.5 py-1 rounded-lg bg-canvas text-[11px] font-medium text-inksoft">Apigee & Kong</span>
+            </div>
+          </div>
+
+          <!-- Card 5: Pre-Sales & Solution Architecture -->
+          <div class="p-7 rounded-3xl bg-warmwhite border border-roseblush/70 shadow-soft-card hover:shadow-soft-hover hover:-translate-y-1 transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-roseblush/60 text-deeprose flex items-center justify-center">
+                <i data-lucide="handshake" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-ink">Solutions Engineering</h3>
+              <p class="text-xs text-deeprose font-semibold tracking-wider uppercase">Strategic Enterprise Deal Wins</p>
+              <p class="text-sm text-inksoft leading-relaxed">
+                Partnered with sales leadership to guide 3–5 stakeholder enterprise buying committees (IT, Security, Legal, Finance) through complex technical evaluations, custom POC architectures, and security reviews for Fortune 500 accounts (Walmart, Hertz).
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-6 border-t border-roseblush/40 mt-6">
+              <span class="px-2.5 py-1 rounded-lg bg-canvas text-[11px] font-medium text-inksoft">POC Frameworks</span>
+              <span class="px-2.5 py-1 rounded-lg bg-canvas text-[11px] font-medium text-inksoft">RFP & Security Reviews</span>
+              <span class="px-2.5 py-1 rounded-lg bg-canvas text-[11px] font-medium text-inksoft">Enterprise Discovery</span>
+              <span class="px-2.5 py-1 rounded-lg bg-canvas text-[11px] font-medium text-inksoft">Client Advocacy</span>
+            </div>
+          </div>
+
+          <!-- Card 6: People Leadership & Blameless Culture -->
+          <div class="p-7 rounded-3xl bg-warmwhite border border-roseblush/70 shadow-soft-card hover:shadow-soft-hover hover:-translate-y-1 transition-all flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-sagebg text-deepsage flex items-center justify-center">
+                <i data-lucide="users" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-ink">People-First Leadership</h3>
+              <p class="text-xs text-deepsage font-semibold tracking-wider uppercase">High-Trust, Continuous Learning</p>
+              <p class="text-sm text-inksoft leading-relaxed">
+                Led distributed, polyglot teams through major architectural transitions. Championed psychological safety, structured career mentorship, blameless post-mortem RCAs (5 Whys, Ishikawa), and intentional succession planning.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-6 border-t border-roseblush/40 mt-6">
+              <span class="px-2.5 py-1 rounded-lg bg-canvas text-[11px] font-medium text-inksoft">Talent Mentorship</span>
+              <span class="px-2.5 py-1 rounded-lg bg-canvas text-[11px] font-medium text-inksoft">Blameless RCAs</span>
+              <span class="px-2.5 py-1 rounded-lg bg-canvas text-[11px] font-medium text-inksoft">SWE Allyship</span>
+              <span class="px-2.5 py-1 rounded-lg bg-canvas text-[11px] font-medium text-inksoft">Continuous Feedback</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- VIEW B: CAREER TIMELINE (HIDDEN INITIALLY) -->
+        <div id="view-timeline" class="hidden max-w-4xl mx-auto space-y-10 transition-all duration-300">
+          
+          <!-- Timeline Entry 1 -->
+          <div class="relative pl-8 border-l-2 border-rosetone/40 space-y-2">
+            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-deeprose border-4 border-warmwhite"></div>
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h3 class="font-serif text-2xl font-bold text-ink">Senior Engineering Manager – API Platform & DevEx</h3>
+              <span class="text-xs font-semibold text-deeprose uppercase tracking-wider bg-roseblush/50 px-3 py-1 rounded-full">Mar 2019 – Jul 2026</span>
+            </div>
+            <div class="text-sm font-medium text-warmgray">Zebra Technologies • Roanoke Area, VA / Remote</div>
+            <p class="text-sm text-inksoft leading-relaxed pt-2">
+              Directed engineering strategy for the global enterprise developer platform and API ecosystem. Introduced AI-assisted developer tooling (Cursor) paired with DORA metrics to drive a 30% increase in team velocity. Chaired the Change Advisory Board (CAB) and established automated CI/CD gating, while leading DevRel initiatives that resulted in a ~30% YoY increase in API adoption.
+            </p>
+          </div>
+
+          <!-- Timeline Entry 2 -->
+          <div class="relative pl-8 border-l-2 border-rosetone/40 space-y-2">
+            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-rosetone border-4 border-warmwhite"></div>
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h3 class="font-serif text-2xl font-bold text-ink">Solution Architect & Pre-Sales Technical Lead</h3>
+              <span class="text-xs font-semibold text-warmgray uppercase tracking-wider bg-canvas px-3 py-1 rounded-full">Jan 2012 – Mar 2019</span>
+            </div>
+            <div class="text-sm font-medium text-warmgray">Zebra Technologies • Roanoke Area, VA / Remote</div>
+            <p class="text-sm text-inksoft leading-relaxed pt-2">
+              Partnered with enterprise sales executives to guide complex technical deals through multi-stakeholder evaluations. Authored client SDKs in .NET, JavaScript, and Xamarin; established interactive developer sandboxes; and co-architected migration paths from legacy systems into scalable microservices across 6 published enterprise software products.
+            </p>
+          </div>
+
+          <!-- Timeline Entry 3 -->
+          <div class="relative pl-8 border-l-2 border-rosetone/40 space-y-2">
+            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-sagetone border-4 border-warmwhite"></div>
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h3 class="font-serif text-2xl font-bold text-ink">Software Engineer</h3>
+              <span class="text-xs font-semibold text-warmgray uppercase tracking-wider bg-canvas px-3 py-1 rounded-full">Jan 2009 – Jan 2012</span>
+            </div>
+            <div class="text-sm font-medium text-warmgray">Zebra Technologies • Vernon Hills, IL</div>
+            <p class="text-sm text-inksoft leading-relaxed pt-2">
+              Developed custom backend applications, microservices, and database layers in .NET, Java, and C++ for flagship clients (Walmart, Hertz, Sabre). Built automated test suites using JUnit and RobotFramework to ensure zero-downtime releases.
+            </p>
+          </div>
+
+          <!-- Timeline Entry 4: Education -->
+          <div class="relative pl-8 border-l-2 border-dashed border-rosetone/40 space-y-2">
+            <div class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-warmgray border-2 border-warmwhite"></div>
+            <h3 class="font-serif text-xl font-bold text-ink">Education & Foundations</h3>
+            <p class="text-sm text-inksoft">
+              <strong>Northern Illinois University</strong> — Bachelor of Science (BS) in Computer Science<br />
+              <strong>Marquette University</strong> — Coursework in Engineering
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: SKILLS TAXONOMY, CERTIFICATIONS & AFFILIATIONS -->
+    <section id="skills-certifications" class="py-16 bg-canvas/40 border-t border-roseblush/50">
+      <div class="max-w-6xl mx-auto px-6">
+        
+        <!-- Header -->
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <div class="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider font-semibold text-deeprose mb-2">
+            <i data-lucide="badge-check" class="w-4 h-4"></i>
+            <span>Verified Credentials & Technical Breadth</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink">Skills, Certifications & Affiliations</h2>
+          <p class="text-sm text-warmgray mt-2">Continuous learning and professional involvement across engineering, AI, and leadership.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Column A: Certifications & Memberships (5 cols) -->
+          <div class="lg:col-span-5 space-y-6">
+            
+            <!-- SWE Membership Feature Box -->
+            <div class="p-6 rounded-3xl bg-gradient-to-br from-warmwhite via-sagebg/50 to-warmwhite border border-sagetone/30 shadow-soft-card relative overflow-hidden">
+              <div class="absolute top-0 right-0 transform translate-x-4 -translate-y-4 w-28 h-28 bg-sagebg rounded-full filter blur-2xl opacity-60"></div>
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-2xl bg-white border border-sagetone/30 flex items-center justify-center text-deepsage shadow-sm shrink-0">
+                  <i data-lucide="users" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-sagebg text-deepsage border border-sagetone/20 mb-1">Professional Member</span>
+                  <h3 class="font-serif text-xl font-bold text-ink">Society of Women Engineers (SWE)</h3>
+                  <p class="text-xs text-inksoft mt-1 leading-relaxed">
+                    Active member dedicated to empowering women to achieve their full potential in engineering careers and expanding diversity within technical leadership.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certification 1: Advanced Prompt Engineering -->
+            <div class="p-6 rounded-3xl bg-warmwhite border border-roseblush shadow-soft-card">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-2xl bg-roseblush/50 text-deeprose flex items-center justify-center shrink-0">
+                  <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-[11px] font-bold text-deeprose uppercase tracking-wider">Certified Program</div>
+                  <h4 class="font-serif text-lg font-bold text-ink">Advanced Prompt Engineering for Everyone</h4>
+                  <p class="text-xs font-medium text-warmgray">Vanderbilt University • Coursera</p>
+                  <p class="text-xs text-inksoft pt-1 leading-relaxed">
+                    Advanced prompt structuring, agentic reasoning, chain-of-thought methodologies, and deterministic validation for LLMs.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certification 2: Governance & ITIL Foundations -->
+            <div class="p-6 rounded-3xl bg-warmwhite border border-roseblush shadow-soft-card">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-2xl bg-canvas text-ink shrink-0 flex items-center justify-center">
+                  <i data-lucide="file-check" class="w-6 h-6"></i>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-[11px] font-bold text-warmgray uppercase tracking-wider">Operational Framework</div>
+                  <h4 class="font-serif text-lg font-bold text-ink">ITIL & DevOps Governance Frameworks</h4>
+                  <p class="text-xs font-medium text-warmgray">Practical Lifecycle & Change Control</p>
+                  <p class="text-xs text-inksoft pt-1 leading-relaxed">
+                    Applied ITIL Foundations in modern CI/CD: automated pipeline gates, risk-tiered change authority, and blameless RCA registers.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Environmental Stewardship Note -->
+            <div class="p-5 rounded-2xl bg-warmwhite/70 border border-white flex items-center gap-3 text-xs text-warmgray">
+              <i data-lucide="leaf" class="w-4 h-4 text-deepsage shrink-0"></i>
+              <span>Active participant in biodiversity and land conservation programs with the <strong>Natural Capital Exchange (NCX)</strong>.</span>
+            </div>
+
+          </div>
+
+          <!-- Column B: Comprehensive LinkedIn Skills Matrix (7 cols) -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="p-7 sm:p-8 rounded-3xl bg-warmwhite border border-roseblush shadow-soft-card">
+              <h3 class="font-serif text-2xl font-bold text-ink mb-6">LinkedIn Endorsed Skills & Capabilities</h3>
+              
+              <!-- Category 1: AI & Engineering Leadership -->
+              <div class="space-y-2 mb-6">
+                <span class="text-xs font-bold uppercase tracking-wider text-deeprose block">AI-Native & Engineering Leadership</span>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink hover:bg-roseblush/50 transition-colors">Prompt Engineering</span>
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink hover:bg-roseblush/50 transition-colors">Agentic Workflows</span>
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink hover:bg-roseblush/50 transition-colors">Cursor / Coding Agents</span>
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink hover:bg-roseblush/50 transition-colors">DORA Metrics</span>
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink hover:bg-roseblush/50 transition-colors">Engineering Management</span>
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink hover:bg-roseblush/50 transition-colors">Change Advisory Board (CAB)</span>
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink hover:bg-roseblush/50 transition-colors">Blameless RCA</span>
+                </div>
+              </div>
+
+              <!-- Category 2: API Management & Governance -->
+              <div class="space-y-2 mb-6">
+                <span class="text-xs font-bold uppercase tracking-wider text-deepsage block">API Management & Enterprise Security</span>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink hover:bg-sagebg transition-colors">API Gateways (Apigee, Kong, KrakenD)</span>
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink hover:bg-sagebg transition-colors">OpenAPI / Swagger</span>
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink hover:bg-sagebg transition-colors">OAuth 2.0 & JWT</span>
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink hover:bg-sagebg transition-colors">GDPR & Compliance</span>
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink hover:bg-sagebg transition-colors">Lifecycle Governance</span>
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink hover:bg-sagebg transition-colors">Policy-as-Code</span>
+                </div>
+              </div>
+
+              <!-- Category 3: Cloud & Backend Stack -->
+              <div class="space-y-2 mb-6">
+                <span class="text-xs font-bold uppercase tracking-wider text-warmgray block">Cloud Infrastructure & Full-Stack Polyglot</span>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink">Google Cloud Platform (GCP Cloud Run)</span>
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink">TypeScript / Node.js</span>
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink">C# / .NET Core</span>
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink">Java & Spring Boot</span>
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink">Python</span>
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink">Kubernetes & Helm Concepts</span>
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink">Apache Kafka</span>
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink">GitHub Actions & CI/CD</span>
+                </div>
+              </div>
+
+              <!-- Category 4: DevRel & Observability -->
+              <div class="space-y-2">
+                <span class="text-xs font-bold uppercase tracking-wider text-rosetone block">Developer Experience, DevRel & QA</span>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink">SDK Authoring (.NET, JS, Xamarin)</span>
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink">Developer Portals</span>
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink">Technical Advocacy & Keynotes</span>
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink">Postman</span>
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink">RobotFramework & JUnit</span>
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink">Datadog</span>
+                  <span class="px-3 py-1.5 rounded-xl bg-canvas text-xs font-medium text-ink">GCP Cloud Monitoring</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: BEYOND THE TERMINAL (HOBBY FARM & PERSONAL LIFE) -->
+    <section id="life" class="py-20 bg-warmwhite/70 border-t border-roseblush/50">
+      <div class="max-w-6xl mx-auto px-6">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-5 space-y-4">
+            <div class="inline-flex items-center gap-2 text-xs font-bold tracking-wider uppercase text-deepsage">
+              <i data-lucide="mountain" class="w-4 h-4"></i>
+              <span>Life in the Blue Ridge</span>
+            </div>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink leading-tight">
+              Beyond the Terminal: <br />
+              <span class="italic font-normal text-deepsage">Land, Views, & Community.</span>
+            </h2>
+            <p class="text-sm text-inksoft leading-relaxed font-light">
+              Great leaders bring grounded perspective to high-stakes technology. When away from the keyboard, I live on a family hobby farm nestled in the scenic Blue Ridge Mountains of Virginia.
+            </p>
+            <p class="text-sm text-inksoft leading-relaxed font-light">
+              Tending to the land, caring for animals, and cultivating sustainable gardens teach the exact same virtues that govern resilient systems: patience, thoughtful stewardship, and deep respect for underlying foundations.
+            </p>
+          </div>
+
+          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
+            
+            <div class="p-6 rounded-3xl bg-canvas/60 border border-white shadow-soft-card space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-sagebg text-deepsage flex items-center justify-center">
+                <i data-lucide="sprout" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-serif text-xl font-bold text-ink">Hobby Farming & Land</h3>
+              <p class="text-xs text-inksoft leading-relaxed">
+                Hands-on land stewardship, organic garden management, and savoring the quiet mountain panoramas of Southwest Virginia with family.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-3xl bg-canvas/60 border border-white shadow-soft-card space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-roseblush/60 text-deeprose flex items-center justify-center">
+                <i data-lucide="gamepad-2" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-serif text-xl font-bold text-ink">Gaming & Strategy</h3>
+              <p class="text-xs text-inksoft leading-relaxed">
+                Passionate PC gamer exploring sandbox, management, and world-building simulations—fueling strategic problem-solving and creative relaxation.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-3xl bg-canvas/60 border border-white shadow-soft-card space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-roseblush/60 text-deeprose flex items-center justify-center">
+                <i data-lucide="waves" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-serif text-xl font-bold text-ink">Swimming & Wellness</h3>
+              <p class="text-xs text-inksoft leading-relaxed">
+                Staying grounded and centered through open-water and pool swimming, maintaining physical endurance and mental clarity for complex challenges.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-3xl bg-canvas/60 border border-white shadow-soft-card space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-sagebg text-deepsage flex items-center justify-center">
+                <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-serif text-xl font-bold text-ink">Local Events & SWE Ally</h3>
+              <p class="text-xs text-inksoft leading-relaxed">
+                Active in regional community events and supporting fellow women in technology through the Society of Women Engineers (SWE).
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: CONTACT & CONNECT -->
+    <section id="contact" class="py-20 bg-warmwhite border-t border-roseblush">
+      <div class="max-w-4xl mx-auto px-6 text-center space-y-6">
+        
+        <div class="w-14 h-14 rounded-full bg-roseblush/60 text-deeprose flex items-center justify-center mx-auto shadow-sm">
+          <i data-lucide="mail" class="w-7 h-7"></i>
+        </div>
+
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-ink">Let's Build Something Meaningful Together</h2>
+        <p class="text-sm sm:text-base text-inksoft max-w-xl mx-auto font-light leading-relaxed">
+          Whether you're looking for an engineering leader to scale platform governance, unlock team velocity via modern AI, or cultivate an inclusive developer ecosystem, I would love to connect.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+          <a href="mailto:songbird499@gmail.com" class="px-8 py-3.5 rounded-full bg-gradient-to-r from-deeprose to-rosetone text-white text-sm font-semibold tracking-wide shadow-soft-card hover:shadow-soft-hover hover:scale-[1.02] transition-all flex items-center gap-2">
+            <i data-lucide="send" class="w-4 h-4"></i>
+            <span>songbird499@gmail.com</span>
+          </a>
+          <a href="https://linkedin.com/in/robinmwest" target="_blank" rel="noopener" class="px-7 py-3.5 rounded-full bg-white border border-rosetone/30 text-ink text-sm font-semibold tracking-wide hover:bg-roseblush/20 transition-all flex items-center gap-2">
+            <i data-lucide="linkedin" class="w-4 h-4 text-rosetone"></i>
+            <span>LinkedIn Profile</span>
+          </a>
+        </div>
+
+        <div class="pt-10 text-xs text-warmgray">
+          Based in Southwest Virginia (Roanoke / Blacksburg Area) • Open to Remote & Strategic Leadership Roles
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-8 bg-parchment border-t border-roseblush/40 text-center text-xs text-warmgray no-print">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="font-serif text-sm font-semibold text-ink">Robin West</div>
+      <div>Designed with warmth, precision, and purpose • Hosted on GitHub Pages</div>
+      <div class="flex items-center gap-4 text-inksoft">
+        <a href="#hero" class="hover:text-deeprose transition-colors">Back to Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- INTERACTIVE LOGIC SCRIPT -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Toggle between Domain Pillars and Timeline View
+    function switchView(viewName) {
+      const pillarsDiv = document.getElementById('view-pillars');
+      const timelineDiv = document.getElementById('view-timeline');
+      const btnPillars = document.getElementById('btn-pillars');
+      const btnTimeline = document.getElementById('btn-timeline');
+
+      if (viewName === 'pillars') {
+        pillarsDiv.classList.remove('hidden');
+        timelineDiv.classList.add('hidden');
+        
+        btnPillars.className = "px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all bg-white text-deeprose shadow-sm";
+        btnTimeline.className = "px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider text-warmgray hover:text-ink transition-all";
+      } else {
+        pillarsDiv.classList.add('hidden');
+        timelineDiv.classList.remove('hidden');
+
+        btnTimeline.className = "px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all bg-white text-deeprose shadow-sm";
+        btnPillars.className = "px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider text-warmgray hover:text-ink transition-all";
+      }
+    }
+  </script>
+</body>
+</html>
